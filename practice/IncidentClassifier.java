@@ -3,7 +3,7 @@ package practice;
 public class IncidentClassifier {
     public static void main (String[] args) {
 
-        String level = "ERROR";
+        String level = "INFO";
         String service = "PaymentService";
         double responseTime = 6.0;
         int errorCount = 120;
