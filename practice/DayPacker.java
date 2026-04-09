@@ -16,7 +16,6 @@ public class DayPacker {
                 System.out.println("Performance Report");
                 break;
             case "Saturday":
-                System.out.println("Non-Maintenance Mode");
             case "Sunday":
                 System.out.println("Maintenance Mode");
                 break;
