@@ -9,7 +9,7 @@ public class StatusEvaluator {
         double responseTime = 6.5;
         boolean isDatabaseDown = false;
 
-        String Severity = level.equals("ERROR") ? "CRITICAL" : "NON-CRITICAL";
+        String severity = level.equals("ERROR") ? "CRITICAL" : "NON-CRITICAL";
         String responseStatus = responseTime > 5.0 ? "SLOW" : "FAST";
         String dbStatus = isDatabaseDown ? "DOWN" : "UP";
         String systemHealth = (errorCount == 0 && !isDatabaseDown) ? "HEALTHY" : "DEGRADED";
@@ -17,7 +17,7 @@ public class StatusEvaluator {
 
         System.out.println("=== SENTINEL STATUS REPORT ===");
         System.out.println("Service " + service);
-        System.out.println("Severity: " + Severity);
+        System.out.println("Severity: " + severity);
         System.out.println("Response: " + responseStatus);
         System.out.println("Database: " + dbStatus);
         System.out.println("Health: " + systemHealth);
