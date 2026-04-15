@@ -1,4 +1,4 @@
-package practice;
+package practice.week1;
 
 public class AlterChecker {
     public static void main (String[] args) {

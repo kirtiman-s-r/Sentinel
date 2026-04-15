@@ -1,4 +1,4 @@
-package practice;
+package practice.week1;
 
 public class WeekOneSummary {
     public static void main (String[] args) {

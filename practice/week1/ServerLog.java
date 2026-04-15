@@ -1,4 +1,4 @@
-package practice;
+package practice.week1;
 
 public class ServerLog {
     public static void main(String[] args) {

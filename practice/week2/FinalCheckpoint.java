@@ -1,4 +1,4 @@
-package practice;
+package practice.week2;
 
 public class FinalCheckpoint {
     public static void main(String[] args) {

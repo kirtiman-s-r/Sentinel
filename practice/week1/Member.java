@@ -1,4 +1,4 @@
-package practice;
+package practice.week1;
 
 public class Member {
         public static void main (String[] args){
@@ -8,7 +8,7 @@ public class Member {
             double dailyStudyHours = 3.5;
             boolean isAccountActive = true;
 
-            System.out.println("practice.Main.Member: " + memberName + ", Age: " + memberAge + ", Target: " + targetGrade + ", Hours: " + dailyStudyHours + ", Active: " + isAccountActive);
+            System.out.println("practice.week1.Main.Member: " + memberName + ", Age: " + memberAge + ", Target: " + targetGrade + ", Hours: " + dailyStudyHours + ", Active: " + isAccountActive);
 
         }
 }

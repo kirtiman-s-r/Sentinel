@@ -1,4 +1,4 @@
-package practice;
+package practice.week2;
 
 public class DayPacker {
     public static void main(String[] args) {
