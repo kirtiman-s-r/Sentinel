@@ -127,5 +127,4 @@ public class FinalCheckpoint {
         System.out.println("Error rate: " + errorRate + "%");
         System.out.println("========================================");
     }
-    //Not from here
 }
