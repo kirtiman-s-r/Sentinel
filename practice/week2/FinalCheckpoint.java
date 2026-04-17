@@ -112,6 +112,7 @@ public class FinalCheckpoint {
                 System.out.println("RETRY PLS");
         }
 
+
         //EXTRA
         int errorLog = 3;
         int criticalLog = 1;
