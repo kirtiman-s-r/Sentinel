@@ -1,0 +1,9 @@
+Homework
+Level 1 — do today:
+Change the loop to generate 20 logs. Add a warnCount variable. Print both error and warn counts at the end.
+---------------------------------
+Level 2 — do today:
+Add a second service. If i is less than 10 → service is "PaymentService". If i is 10 or above → service is "AuthService". Print which service each log came from.
+---------------------------------
+Level 3 — weekend:
+Make logId start from 1000 instead of 1. So first log is Log #1000, second is Log #1001. Figure out how using what you know about i.
