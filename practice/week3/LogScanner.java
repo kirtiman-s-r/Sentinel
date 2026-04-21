@@ -9,12 +9,14 @@ public class LogScanner {
         int logNumber = 1;
         boolean criticalFound = false;
         int scannedCount = 0;
+        int maxScan = 0;
+        int errorCount = 0;
 
         while (!criticalFound && logNumber <= 20) {
 
             String status;
             if (logNumber % 4 == 0) {
-                status = "WARN";
+                status = "ERROR";
                 criticalFound = true;
             } else if (logNumber % 5 == 0) {
                 status = "CRITICAL";
@@ -27,7 +29,18 @@ public class LogScanner {
             System.out.println("Scanning log #" + (logNumber -1) + " - " + status);
             scannedCount++;
             logNumber++;
+        }
 
+        while ( !criticalFound && maxScan <= 10) {
+
+            String status;
+            if (logNumber % 4 == 0) {
+                status = "ERROR";
+                errorCount++;
+                System.out.println(errorCount + " errors were found in first 10 logs. System not stable");
+            } else {
+                System.out.println("NO errors found in first 10 logs. System stable");
+            }
         }
 
         System.out.println("");
