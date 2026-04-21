@@ -13,16 +13,18 @@ public class LogScanner {
         while (!criticalFound && logNumber <= 20) {
 
             String status;
-            if (logNumber % 5 == 0) {
-                status = "CRITICAL";
+            if (logNumber % 4 == 0) {
+                status = "WARN";
                 criticalFound = true;
+            } else if (logNumber % 5 == 0) {
+                status = "CRITICAL";
             } else if (logNumber % 3 == 0) {
                 status = "WARN";
             } else {
                 status  = "OK";
             }
 
-            System.out.println("Scanning log #" + logNumber + " - " + status);
+            System.out.println("Scanning log #" + (logNumber -1) + " - " + status);
             scannedCount++;
             logNumber++;
 
