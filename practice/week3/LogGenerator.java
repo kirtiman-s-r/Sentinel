@@ -13,7 +13,8 @@ public class LogGenerator {
             int logId = i +1;
 
             if (i < 10) {
-                service = "Payment Service";
+                service = "Payment" +
+                        "Service";
             } else if (i >= 10) {
                 service = "AuthService";
             }
