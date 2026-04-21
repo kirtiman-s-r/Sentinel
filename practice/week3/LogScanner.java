@@ -31,16 +31,19 @@ public class LogScanner {
             logNumber++;
         }
 
-        while ( !criticalFound && maxScan <= 10) {
+        System.out.println("");
+
+        while ( criticalFound && maxScan <= 10) {
 
             String status;
             if (logNumber % 4 == 0) {
                 status = "ERROR";
                 errorCount++;
-                System.out.println(errorCount + " errors were found in first 10 logs. System not stable");
+                System.out.println( status + " | " +errorCount + " errors were found in first 10 logs. System not stable");
             } else {
                 System.out.println("NO errors found in first 10 logs. System stable");
             }
+            maxScan++;
         }
 
         System.out.println("");
