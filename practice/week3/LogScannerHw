@@ -1,0 +1,9 @@
+Homework
+Level 1:
+Change the scanner to look for the first ERROR (not CRITICAL). Every 4th log is an ERROR. Print how many logs were scanned before finding it.
+----------------------------------------------------------------------------------------------------------------------------------
+Level 2:
+Add a maxScan limit of 10. If no ERROR found within 10 logs → print "No errors in first 10 logs. System stable." Use while with two conditions like the example.
+-------------------------------------------------------------------------------------------------------------------------------
+Level 3 — weekend:
+Combine for and while. Use a for loop to generate 30 logs. Inside the for loop, use a while loop to keep a running error streak count — if 3 errors in a row → print "ERROR STREAK DETECTED" and reset counter.

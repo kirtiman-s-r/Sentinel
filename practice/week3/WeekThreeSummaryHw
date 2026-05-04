@@ -1,0 +1,40 @@
+# Week 3 Mini Project — `FinalLogProcessor.java`
+
+Build this from scratch. No looking at previous files.
+
+**Target output:**
+```
+=== SENTINEL LOG PROCESSOR ===
+
+System initializing...
+Check #1 complete.
+Check #2 complete.
+Check #3 complete. System ready.
+
+Processing 50 logs...
+
+[ERROR] PaymentService | Log #3 — ALERT SENT
+[ERROR] AuthService | Log #6 — ALERT SENT
+[ERROR] PaymentService | Log #9 — ALERT SENT
+[ERROR] AuthService | Log #12 — ALERT SENT
+[ERROR] PaymentService | Log #15 — ALERT SENT
+CRITICAL detected at Log #20 — halting scan.
+
+=== FINAL REPORT ===
+Total processed: 20
+Errors found: 5
+INFO skipped: 6
+System status: DEGRADED
+```
+
+**Rules — figure out HOW yourself:**
+- `do-while` → 3 system checks before ready DONE
+- `for` loop → process up to 50 logs
+- `continue` → skip INFO logs
+- `break` → stop at first CRITICAL
+- Alternate services every other log
+- Every 3rd log = ERROR, every 4th = CRITICAL, every 5th = INFO, rest = WARN
+- Count errors, skipped, total processed
+- Status = DEGRADED if errors > 0, else HEALTHY
+
+---

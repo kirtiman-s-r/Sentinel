@@ -1,0 +1,7 @@
+Homework
+Level 1:
+Change the system check to require 3 successful checks before ready. Print which attempt succeeded.
+Level 2:
+Add warnCount. Use continue to skip INFO. Use break to stop at CRITICAL. Print final counts of ERROR, WARN, and skipped INFO at the end.
+Level 3 — weekend:
+Nest a do-while inside a for loop. For each log, retry processing up to 3 times if it's an ERROR. Print each retry attempt.
