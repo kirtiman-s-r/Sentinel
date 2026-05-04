@@ -29,21 +29,34 @@ public class WeekThreeSummary {
         System.out.println("");
         System.out.println("Processing 50 logs\n");
 
+        String service = "a";
 
-        for (int i = 0; i == 50; i++) {
+
+        for (int i = 0; i <= 50; i++) {
 
             if (i % 3 == 0) {
                 info = "ERROR";
                 errorCount++;
             } else if (i % 4 == 0) {
                 info = "CRITICAL";
+                break;
             } else if (i % 5 == 0) {
                 info = "INFO";
+                skippedCount++;
+                continue;
             } else {
                 info = "WARN";
             }
 
+            if ( i % 2 == 0) {
+                System.out.println("PaymentService");
+            } else {
+                System.out.println("AuthService");
+            }
+
 
         }
+
+        String aStatus = (errorCount > 0)? "DEGRADED" : "HEALTHY";
     }
 }
