@@ -28,12 +28,14 @@ System status: DEGRADED
 ```
 
 **Rules — figure out HOW yourself:**
-- `do-while` → 3 system checks before ready DONE
-- `for` loop → process up to 50 logs
-- `continue` → skip INFO logs
-- `break` → stop at first CRITICAL
-- Alternate services every other log
-- Every 3rd log = ERROR, every 4th = CRITICAL, every 5th = INFO, rest = WARN
+! `do-while` → 3 system checks before ready
+DONE
+! `for` loop → process up to 50 logs
+! `continue` → skip INFO logs
+! `break` → stop at first CRITICAL
+! Alternate services every other log
+! Every 3rd log = ERROR, every 4th = CRITICAL, every 5th = INFO, rest = WARN
+DONE
 - Count errors, skipped, total processed
 - Status = DEGRADED if errors > 0, else HEALTHY
 
