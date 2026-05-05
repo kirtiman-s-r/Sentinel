@@ -12,7 +12,7 @@ public class LogModel {
         boolean isResolved = false;
 
         // Join everything into one formatted log line
-        String logLine = "[" + level + "] " + timestamp + " | " + service + " | " + message;
+        String logLine = "[" + level + "] q" + timestamp + " | " + service + " | " + message;
 
         // Print the full log line
         System.out.println(logLine);
