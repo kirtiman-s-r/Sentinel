@@ -1,7 +1,7 @@
 package practice.week3;
 
-public class WeekThreeSummary {
-    static void main(String[] args) {
+public class WeekThreeSummary1 {
+    public static void main(String[] args) {
 
         System.out.println("=== SENTINEL LOG PROCESSOR ===\n");
         System.out.println("System initializing...");
@@ -27,29 +27,26 @@ public class WeekThreeSummary {
         boolean isLogNumberExceed = false;
 
         for (int i = 1; i <=50; i++) {
-            totalLogsProcessed++;
-
-            if (i <= 50 && !isLogNumberExceed ) {
-                System.out.println("[" + errorType + "] " + service + " | "+ "Log #" +totalLogsProcessed + " - " + decisionTaken);
-            } else if  ((i <= 50 && !isLogNumberExceed )){
-                System.out.println(errorType + " detected at Log #" +totalLogsProcessed + " - " + decisionTaken);
-            }
 
             String errorType;
-            if (i % 4 == 0) {
-                errorType = "CRITICAL";
-                isLogNumberExceed = true;
-                break;
-            } else if (i % 3 == 0) {
+
+            if (i % 3 == 0) {
                 errorType = "ERROR";
                 errorCount++;
+            } else if (i % 20 == 0) {
+                errorType = "CRITICAL";
+                isLogNumberExceed = true;
+                System.out.println("CRITICAL detected at Log #" + i + " - halting scan.");
+                break;
             } else if (i % 5 == 0) {
                 errorType = "INFO";
                 skippedLogs++;
                 continue;
             }else{
                 errorType = "WARN";
+                continue;
             }
+            totalLogsProcessed++;
 
             String service;
             if (i % 2 == 0) {
@@ -65,6 +62,11 @@ public class WeekThreeSummary {
                 decisionTaken = "halting scan";
             }
 
+            if (i <= 50 && !isLogNumberExceed ) {
+                System.out.println("[" + errorType + "] " + service + " | "+ "Log #" + i+ " - " + decisionTaken);
+            } else if  ((i <= 50 && !isLogNumberExceed )){
+                System.out.println(errorType + " detected at Log #" + i + " - " + decisionTaken);
+            }
 
         }
 
